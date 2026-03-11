@@ -88,7 +88,7 @@ article img {
 .modal-container {
   position: relative;
   width: min(600px, 90%);
-  padding: 28px;
+  padding: 19px 14px 5px 12px;
   border-radius: 10px;
   background: #fff;
   transform: scale(0);
@@ -114,6 +114,24 @@ article img {
 .modal-content {
   max-height: 80vh;
   overflow-y: auto;
+}
+
+.modal-footer {
+  padding: 20px 0;
+  justify-content: flex-end;
+  display: flex;
+  gap: 8px;
+}
+
+.modal-btn {
+  padding: 8px 20px;
+  background-color: #e20031;
+  color: #fff;
+  border-radius: 12px;
+}
+
+.modal-btn.primary {
+  background-color: #1fc64c;
 }
 
 .no-scroll {
