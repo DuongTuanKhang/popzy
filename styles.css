@@ -31,10 +31,6 @@ button {
   cursor: pointer;
 }
 
-main {
-  margin: 20px;
-}
-
 .btn {
   border: 2px solid #ccc;
   border-radius: 8px;
@@ -63,39 +59,39 @@ article img {
   max-width: 100%;
 }
 
-.modal-backdrop {
+.modix__backdrop {
   position: fixed;
   inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
   opacity: 0;
   visibility: hidden;
   transition: opacity, visibility;
   transition-duration: 0.3s;
 }
 
-.modal-backdrop.show {
+.modix--show {
   opacity: 1;
   visibility: visible;
 }
 
-.modal-backdrop.show .modal-container {
+.modix--show .modix__container {
   transform: scale(1);
 }
 
-.modal-container {
+.modix__container {
   position: relative;
   width: min(600px, 90%);
-  padding: 19px 14px 5px 12px;
-  border-radius: 10px;
+  padding: 20px 20px 0;
+  border-radius: 6px;
   background: #fff;
   transform: scale(0);
   transition: transform 0.3s;
 }
 
-.modal-close {
+.modix__close {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -107,34 +103,40 @@ article img {
   font-size: 2rem;
 }
 
-.modal-close:hover {
+.modix__close:hover {
   color: #333;
 }
 
-.modal-content {
+.modix__content {
   max-height: 80vh;
   overflow-y: auto;
 }
 
-.modal-footer {
-  padding: 20px 0;
-  justify-content: flex-end;
+.modix__footer {
   display: flex;
+  justify-content: flex-end;
   gap: 8px;
+  padding: 20px 0;
 }
 
-.modal-btn {
+.modix__btn {
   padding: 8px 20px;
-  background-color: #e20031;
   color: #fff;
-  border-radius: 12px;
+  background: #34495e;
 }
 
-.modal-btn.primary {
-  background-color: #1fc64c;
+.modix__btn--primary {
+  background: #3498db;
 }
 
-.no-scroll {
+.modix__btn--danger {
+  background: #e74c3c;
+}
+
+.modix__btn--pull-left {
+  margin-right: auto;
+}
+
+.modix--no-scroll {
   overflow: hidden;
-  position: absolute;
 }
