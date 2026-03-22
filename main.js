@@ -285,4 +285,22 @@ $("#open-modal-3").onclick = () => {
   modal3.open();
 };
 
-window.Modix = Modix;
+const modal4 = new Modix({
+  templateId: "modal-4",
+  closeMethods: ["button", "overlay", "escape"],
+  footer: true,
+  onOpen: () => {
+    console.log("Modal 4 opened");
+  },
+  onClose: () => {
+    console.log("Modal 4 closed");
+  },
+});
+
+$("#open-modal-4").onclick = () => {
+  modal4.open();
+};
+
+modal4.addFooterButton("Cancel", "modix__btn", (e) => {
+  alert("Cancel clicked!");
+});
